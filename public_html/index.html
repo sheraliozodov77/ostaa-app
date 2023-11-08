@@ -1,0 +1,59 @@
+<!-- 
+    Assignment 9
+    Ostaa - Online Marketplace App HTML (Part 2)
+
+    This HTML document provides the login and account creation interfaces 
+    for the OSTAA platform. Users can log in using their credentials or 
+    create a new account by entering a username and password. The forms 
+    are designed to handle user authentication and account registration
+    processes seamlessly.
+
+    Author: Sherali Ozodov
+    Course: CSC 337
+    File: index.html
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Ostaa</title>
+</head>
+<body>
+    <!-- Main container for user authentication sections -->
+    <div class="body1">
+        <!-- Login section -->
+        <div class="login-user">
+            <h1 class="title-login-user">Login</h1>
+            <!-- Login form -->
+            <form id="login-form" method="POST">
+                <!-- Username input -->
+                <label for="username-login">Username</label> 
+                <input type="text" id="username-login" name="username-login" required>
+                <!-- Password input -->
+                <label for="password-login">Password</label>
+                <input type="password" id="password-login" name="password-login" required>
+                <!-- Login submit button -->
+                <div><input type="submit" value="Login"></div>
+            </form>
+        </div>
+        <!-- Account creation section -->
+        <div class="add-user">
+            <h1 class="title-add-user">Create Account</h1>
+            <!-- Account creation form -->
+            <form id="create-account-form" method="POST">
+                <!-- Username input -->
+                <label for="username-create">Username</label> 
+                <input type="text" id="username-create" name="username-create" required>
+                <!-- Password input -->
+                <label for="password-create">Password</label>
+                <input type="password" id="password-create" name="password-create" required>
+                <!-- Account creation submit button -->
+                <div><input type="submit" value="Create"></div>
+            </form>
+        </div>
+    </div>
+    <script src="./client.js"></script>
+</body>
+</html>

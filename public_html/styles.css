@@ -1,0 +1,280 @@
+/*
+    Ostaa - Online Marketplace App CSS (Part 2)
+
+    This CSS file provides the styles for "Ostaa," an online marketplace app. It has been
+    updated for Part 2 of the assignment to support user login and account creation functionality,
+    ensuring a consistent and user-friendly interface across the login and account creation pages.
+
+    Author: Sherali Ozodov
+    Course: CS 337
+    File: styles.css
+*/
+
+/* Basic reset to remove default margin and padding for the body */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the headings to have no top margin for a cleaner look */
+h2 {
+    margin-top: 0;
+}
+
+/* Full height for the main body container and a soft blue background */
+.body1 {
+    height: 100vh;
+    background-color: #7fc1f4;
+}
+
+/* Styling for the login section with padding for positioning */
+.login-user {
+    padding-left: 70px;
+    padding-top: 30px;
+    margin-bottom: 60px;
+}
+
+/* Styling for the account creation section */
+.add-user {
+    padding-left: 70px;
+    padding-top: 30px;
+    margin-bottom: 60px;
+}
+
+/* Styling labels for better readability */
+label {
+    display: block;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 2px;
+    padding-left: 70px;
+}
+
+/* Style text and password inputs consistently with padding and border radius */
+input[type="text"],
+input[type="password"] {
+    width: 210px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 70px;
+    
+}
+
+/* Style for the submit buttons with a primary color and hover effect */
+input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 14px;
+    margin-left: 70px;
+}
+
+/* Darken the submit button when hovered for a visual feedback */
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Color titles in a dark blue for consistency with the theme */
+.title-add-user,
+.title-login-user {
+    color: #0a396a;
+    padding-left: 70px;
+}
+
+/* Styles the main title of Ostaa with padding, color, and font size */
+.title-ostaa {
+    padding-top: 60px;
+    color: #0a396a; 
+    padding-left: 70px; 
+    font-size: 35px; 
+}
+
+/* Styles for the title above the "Add Item" section with font size and padding */
+.title-add-item {
+    font-size: 20px;
+    padding-left: 70px; 
+}
+
+/* General header styles for the header area */
+.header {
+    background-color: #7fc1f4;
+    width: 100%; 
+    height: 20%;
+    padding-top: 7px;
+    padding-bottom: 15px; 
+}
+
+/* General title text styles for a prominent appearance */
+.title {
+    font-size: 60px;
+}
+
+/* Styles for the title within the header with padding and font size */
+.title-header {
+    padding-left: 33px;
+    font-size: 28px;
+    padding-top: 20px; 
+    padding-bottom: -10px; 
+}
+
+/* Styling for the content area to differentiate from other sections */
+.content {
+    background-color: rgb(114, 184, 108);
+}
+
+/* Flexbox container to center content horizontally and vertically */
+.container {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+/* Styles for two main sections of the interface to divide the space evenly */
+.first-part {
+    flex: 1;
+    border: 2px solid rgb(87, 83, 83);
+    height: 90vh;
+}
+
+.second-part {
+    flex: 1;
+    border: 2px solid rgb(87, 83, 83);
+    height: 90vh;
+    padding-left: 50px;
+    overflow-x: auto;
+}
+
+/* Styles for the welcome message with padding and font size */
+.welcome {
+    padding-top: 14px;
+    padding-left: 33px; 
+    padding-right: 25px; 
+    font-size: 27px; 
+}
+
+/* Padding for the search listings section for alignment */
+.search-listings {
+    padding-left: 33px; 
+}
+
+/* Styles for the search listings input field */
+#search-listings {
+    margin-top: 17px;
+    margin-left: 33px; 
+    margin-right: 15px; 
+    margin-bottom: 25px; 
+    font-size: 15px;
+    width: 180px; 
+    height: 10px;
+}
+
+/* Button styles for various actions in the interface */
+#view-listings, 
+#view-purchases,
+.button-link {
+    background-color: #0070a8;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 14px;
+    padding: 7px;
+    margin-left: 33px;
+    margin-bottom: 25px;
+    text-decoration: none;
+}
+
+/* Hover styles for buttons to give feedback when the 
+user hovers over them */
+#view-listings:hover, 
+#view-purchases:hover,
+#create-listing:hover,
+#search:hover {
+    background-color: #347bc6;
+}
+
+
+/* Style for the search button matching other button styles */
+#search {
+    background-color: #0070a8;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 7px;
+}
+
+
+/* Style for each listing */
+.listing{
+    border: 2px solid green;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    width: 400px;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 128, 0, 0.2);
+    background-color: #f0f9ec; 
+    transition: transform 0.2s;
+    padding-left: 25px;
+    align-items: center;
+  }
+  
+  /* Style for the listing title */
+  .listing h3 {
+    color: #004d00;
+    margin-bottom: 5px;
+  }
+  
+  /* Style for the listing details like description, price, status */
+  .listing p {
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  /* Hover effect for listings */
+  .listing:hover {
+    transform: scale(1.02);
+    box-shadow: 0 2px 2px rgba(0, 128, 0, 0.3);
+  }
+
+
+/* Style for each purchased item */
+.purchased-item{
+    border: 2px solid green;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    width: 400px;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 128, 0, 0.2);
+    background-color: #f0f9ec; 
+    transition: transform 0.2s;
+    padding-left: 25px;
+    align-items: center;
+  }
+  
+  /* Style for the listing title */
+  .purchased-item h3 {
+    color: #004d00;
+    margin-bottom: 5px;
+  }
+  
+  /* Style for the listing details like description, price, status */
+  .purchased-item p {
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  /* Hover effect for listings */
+  .purchased-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 2px 2px rgba(0, 128, 0, 0.3);
+  }

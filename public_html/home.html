@@ -1,0 +1,53 @@
+<!-- 
+    Assignment 9
+    Ostaa - Online Marketplace App HTML (Part 2)
+
+    This HTML document serves as the main interface for the OSTAA platform, 
+    where users are greeted with a welcome message and provided with options 
+    to search listings, view their own listings, view their purchases, and 
+    create new listings. The layout includes a header with the site's title 
+    and a content area with action buttons and a search input field. It is 
+    structured to offer a straightforward and user-friendly experience for 
+    navigating the marketplace.
+
+    Author: Sherali Ozodov
+    Course: CSC 337
+    File: home.html
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ostaa</title>
+</head>
+<body>
+    <!-- Site header with main title -->
+    <div class="header">
+        <h1 class="title-header">OSTAA</h1>
+    </div>
+    <!-- Main content area -->
+    <div class="content">
+        <div class="container">
+            <!-- Section for search and listing actions -->
+            <div class="first-part">
+                <h1 class="welcome">Welcome message</h1>
+                <!-- Search input -->
+                <input type="text" id="search-listings" name="search-listings" required>
+                <!-- Buttons for different user actions -->
+                <button id="search">Search Listings</button>
+                <div><button id="view-listings">View your Listings</button></div>
+                <div><button id="view-purchases">View your purchases</button></div>
+                <!-- Link to create a new listing -->
+                <a href="post.html" class="button-link">Create a Listing</a>
+            </div>
+            <!-- Right-side section -->
+            <div class="second-part">
+            </div>
+        </div>
+    </div>
+    <!-- External JavaScript file -->
+    <script src="./client.js"></script>
+</body>
+</html>
