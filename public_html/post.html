@@ -1,0 +1,63 @@
+<!-- 
+    Assignment 9
+    Ostaa - Online Marketplace App HTML (Part 2)
+
+    This HTML document serves as the interface for adding new posts on 
+    the OSTAA platform. Users can enter details for the item they wish 
+    to sell, including its title, description, price, and status. The form 
+    supports multipart/form-data to allow image uploads, ensuring that users 
+    can showcase their items with visual representations.
+
+    Author: Sherali Ozodov
+    Course: CSC 337
+    File: post.html
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include the external stylesheet for styling -->
+    <link rel="stylesheet" href="./styles.css">
+    <title>Ostaa</title>
+</head>
+<body>
+    <div class="body1">
+        <h2 class="title-ostaa">OSTAA</h2>
+        <h2 class="title-add-item">Add a Post</h2>
+        <!-- Add Item Section -->
+        <div class="add-item">
+            <div class="input-field">
+                <form id="item-form" method="POST" action="add-item">
+                    <div class="input">
+                        <!-- Label for the item title input -->
+                        <label for="title-item">Title</label>
+                        <input type="text" id="title-item" name="title-item" required>
+                    </div>
+                    <div class="input">
+                        <!-- Label for the item description input -->
+                        <label for="description">Description</label>
+                        <input type="text" id="description" name="description" required>
+                    </div>
+                    <div class="input">
+                        <!-- Label for the item price input -->
+                        <label for="price">Price</label>
+                        <input type="text" id="price" name="price" required>
+                    </div>
+                    <div class="input">
+                        <!-- Label for the item status input -->
+                        <label for="status">Status</label>
+                        <input type="text" id="status" name="status" required>
+                    </div>
+                    <div class="item-button">
+                        <!-- Submit button for adding an item -->
+                        <input type="submit" value="Create Post"> 
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./client.js"></script>
+</body>
+</html>
