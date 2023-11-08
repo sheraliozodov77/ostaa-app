@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(data => {
         if (data.success) {
           // If login is successful, redirect the user to the home page.
+          localStorage.setItem('sessionId', data.sessionId);
           window.location.href = '/home.html';
         } else {
           alert('Login failed: ' + data.message);
@@ -216,7 +217,7 @@ function displayListings(listings) {
       title.innerText = listing.title;
 
       const description = document.createElement('p');
-      description.innerText = `Description: $${listing.description}`;
+      description.innerText = `Description: ${listing.description}`;
 
       const price = document.createElement('p');
       price.innerText = `Price: $${listing.price}`;
@@ -288,7 +289,7 @@ if (searchButton) {
 function buyItem(itemId) {
   // Get the sessionId from localStorage.
   const sessionId = localStorage.getItem('sessionId');
-  
+  console.log(sessionId)
   // Check if the user is logged in.
   if (!sessionId) {
     alert('You must be logged in to purchase items.');
@@ -372,7 +373,7 @@ function displayPurchasedItems(purchasedItems) {
       title.innerText = item.title;
 
       const description = document.createElement('p');
-      description.innerText = `Description: $${item.description}`;
+      description.innerText = `Description: ${item.description}`;
 
       const price = document.createElement('p');
       price.innerText = `Price: $${item.price}`;
@@ -392,3 +393,22 @@ function displayPurchasedItems(purchasedItems) {
   }
 }
 
+
+// Read the session ID from a cookie
+function getSessionId() {
+  const cookies = document.cookie.split(';');
+  for (const cookie of cookies) {
+    const [name, value] = cookie.trim().split('=');
+    if (name === 'sessionId') {
+      return value;
+    }
+  }
+  return null;
+}
+
+const sessionId = getSessionId();
+if (sessionId) {
+  console.log(`Session ID: ${sessionId}`);
+} else {
+  console.log('Session ID not found.');
+}
