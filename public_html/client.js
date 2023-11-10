@@ -10,7 +10,7 @@
       account, posting new items, viewing listings, and searching for items within 
       the marketplace.
 
-    Author: Sherali Ozodov
+    Author: Sherali Ozodov, Khamdam Kadirov
     Course: CSC 337
     File: client.js
 */
@@ -407,8 +407,3 @@ function getSessionId() {
 }
 
 const sessionId = getSessionId();
-if (sessionId) {
-  console.log(`Session ID: ${sessionId}`);
-} else {
-  console.log('Session ID not found.');
-}
