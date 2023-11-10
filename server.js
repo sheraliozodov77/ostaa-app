@@ -275,15 +275,27 @@ app.post('/add-item', (req, res) => {
     });
 });
 
-// GET endpoint to list all items
-app.get('/list-items', (req, res) => {
-  // Find all items in the database and execute the query
-  Item.find().exec()
-    .then(items => {
-      res.json(items);
+// GET endpoint to list the items owned by the logged-in user
+app.get('/list-items', authenticate, (req, res) => {
+  // Retrieve the username from the session
+  const username = req.session.username;
+
+  // Find the user in the database
+  User.findOne({ username: username })
+  // Populate the 'listings' field
+    .populate('listings')
+    .exec()
+    .then(user => {
+      if (!user) {
+        return res.status(404).json({ success: false, message: 'User not found.' });
+      }
+      // Get the user's listings from the populated 'listings' field
+      const listings = user.listings;
+
+      res.json(listings);
     })
     .catch(error => {
-      // Handle errors in fetching the items
+      // Handle errors in fetching the user or listings
       res.status(500).send(error);
     });
 });
