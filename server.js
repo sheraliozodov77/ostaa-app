@@ -24,7 +24,7 @@
     - Static file serving: Delivers the frontend assets like HTML, CSS, and client-side
       JavaScript to the user's browser.
     
-    Author: Sherali Ozodov
+    Author: Sherali Ozodov, Khamdam Kadirov
     Course: CSC 337
     File: server.js
 */
